@@ -202,7 +202,7 @@ export default function AdminLayout({
       <div className="flex flex-col w-0 flex-1 overflow-hidden">
         <div className="relative z-10 flex-shrink-0 flex h-16 bg-white shadow">
           <button
-            className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary lg:hidden"
+            className="px-4 border-r border-gray-200 text-brown focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold lg:hidden"
             onClick={toggleSidebar}
           >
             <span className="sr-only">Abrir sidebar</span>
@@ -211,7 +211,7 @@ export default function AdminLayout({
 
           {!isMobile && (
             <button
-              className="px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary hidden lg:block"
+              className="px-4 text-brown focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold hidden lg:block"
               onClick={toggleSidebar}
             >
               <Menu className="h-6 w-6" />

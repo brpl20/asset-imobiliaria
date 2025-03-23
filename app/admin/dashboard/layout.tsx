@@ -60,7 +60,7 @@ export default function AdminLayout({
           <div className="relative flex-1 flex flex-col max-w-xs w-full bg-black">
             <div className="absolute top-0 right-0 -mr-12 pt-2">
               <button
-                className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold"
                 onClick={toggleSidebar}
               >
                 <span className="sr-only">Fechar sidebar</span>
@@ -70,7 +70,7 @@ export default function AdminLayout({
 
             <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
               <div className="flex-shrink-0 flex items-center px-4">
-                <span className="text-2xl font-bold text-primary">ASSET</span>
+                <span className="text-2xl font-bold text-gold">ASSET</span>
               </div>
               <nav className="mt-5 px-2 space-y-1">
                 {navigation.map((item) => (
@@ -86,7 +86,7 @@ export default function AdminLayout({
                   >
                     <item.icon
                       className={cn(
-                        isActive(item.href) ? "text-primary" : "text-gray-400 group-hover:text-gray-300",
+                        isActive(item.href) ? "text-gold" : "text-gray-400 group-hover:text-gray-300",
                         "mr-4 flex-shrink-0 h-6 w-6",
                       )}
                     />
@@ -99,15 +99,15 @@ export default function AdminLayout({
               <div className="flex-shrink-0 group block">
                 <div className="flex items-center">
                   <div>
-                    <div className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center text-white">
+                    <div className="h-10 w-10 rounded-full bg-brown flex items-center justify-center text-white">
                       A
                     </div>
                   </div>
                   <div className="ml-3">
-                    <p className="text-base font-medium text-white">Admin</p>
+                    <p className="text-base font-medium text-gold">Admin</p>
                     <Link
                       href="/admin/login"
-                      className="text-sm font-medium text-gray-400 group-hover:text-gray-300 flex items-center"
+                      className="text-sm font-medium text-gray-400 group-hover:text-gold flex items-center"
                     >
                       <LogOut className="mr-2 h-4 w-4" /> Sair
                     </Link>
@@ -131,9 +131,9 @@ export default function AdminLayout({
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-4">
                 {isSidebarOpen ? (
-                  <span className="text-2xl font-bold text-primary">ASSET</span>
+                  <span className="text-2xl font-bold text-gold">ASSET</span>
                 ) : (
-                  <span className="text-2xl font-bold text-primary">A</span>
+                  <span className="text-2xl font-bold text-gold">A</span>
                 )}
               </div>
               <nav className="mt-5 flex-1 px-2 space-y-1">
@@ -151,7 +151,7 @@ export default function AdminLayout({
                   >
                     <item.icon
                       className={cn(
-                        isActive(item.href) ? "text-primary" : "text-gray-400 group-hover:text-gray-300",
+                        isActive(item.href) ? "text-gold" : "text-gray-400 group-hover:text-gray-300",
                         "flex-shrink-0 h-6 w-6",
                         isSidebarOpen && "mr-3",
                       )}
@@ -166,15 +166,15 @@ export default function AdminLayout({
                 {isSidebarOpen ? (
                   <div className="flex items-center">
                     <div>
-                      <div className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center text-white">
+                      <div className="h-10 w-10 rounded-full bg-brown flex items-center justify-center text-white">
                         A
                       </div>
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-white">Admin</p>
+                      <p className="text-sm font-medium text-gold">Admin</p>
                       <Link
                         href="/admin/login"
-                        className="text-xs font-medium text-gray-400 group-hover:text-gray-300 flex items-center"
+                        className="text-xs font-medium text-gray-400 group-hover:text-gold flex items-center"
                       >
                         <LogOut className="mr-1 h-3 w-3" /> Sair
                       </Link>
@@ -182,12 +182,12 @@ export default function AdminLayout({
                   </div>
                 ) : (
                   <div className="flex flex-col items-center">
-                    <div className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center text-white">
+                    <div className="h-10 w-10 rounded-full bg-brown flex items-center justify-center text-white">
                       A
                     </div>
                     <Link
                       href="/admin/login"
-                      className="mt-2 text-xs font-medium text-gray-400 group-hover:text-gray-300"
+                      className="mt-2 text-xs font-medium text-gray-400 group-hover:text-gold"
                     >
                       <LogOut className="h-4 w-4" />
                     </Link>
@@ -220,12 +220,12 @@ export default function AdminLayout({
 
           <div className="flex-1 px-4 flex justify-between">
             <div className="flex-1 flex items-center">
-              <h1 className="text-2xl font-semibold text-gray-900">
+              <h1 className="text-2xl font-semibold text-brown">
                 {navigation.find((item) => isActive(item.href))?.name || "Dashboard"}
               </h1>
             </div>
             <div className="ml-4 flex items-center md:ml-6">
-              <button className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
+              <button className="bg-white p-1 rounded-full text-brown hover:text-gold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold">
                 <span className="sr-only">Ver notificações</span>
                 <svg
                   className="h-6 w-6"
